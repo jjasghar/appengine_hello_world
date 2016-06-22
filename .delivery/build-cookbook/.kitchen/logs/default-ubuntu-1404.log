@@ -1,0 +1,79 @@
+I, [2016-06-22T16:04:08.574686 #18427]  INFO -- default-ubuntu-1404: -----> Creating <default-ubuntu-1404>...
+I, [2016-06-22T16:04:09.957814 #18427]  INFO -- default-ubuntu-1404: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2016-06-22T16:04:10.089783 #18427]  INFO -- default-ubuntu-1404: ==> default: Importing base box 'bento/ubuntu-14.04'...
+I, [2016-06-22T16:04:16.836965 #18427]  INFO -- default-ubuntu-1404: [KProgress: 20%[KProgress: 30%[KProgress: 40%[KProgress: 50%[KProgress: 60%[KProgress: 70%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2016-06-22T16:04:16.945532 #18427]  INFO -- default-ubuntu-1404: ==> default: Checking if box 'bento/ubuntu-14.04' is up to date...
+I, [2016-06-22T16:04:17.962508 #18427]  INFO -- default-ubuntu-1404: ==> default: Setting the name of the VM: kitchen-build-cookbook-default-ubuntu-1404_default_1466629457925_41329
+I, [2016-06-22T16:04:18.236157 #18427]  INFO -- default-ubuntu-1404: ==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+I, [2016-06-22T16:04:18.444560 #18427]  INFO -- default-ubuntu-1404: ==> default: Clearing any previously set network interfaces...
+I, [2016-06-22T16:04:18.487509 #18427]  INFO -- default-ubuntu-1404: ==> default: Preparing network interfaces based on configuration...
+I, [2016-06-22T16:04:18.487719 #18427]  INFO -- default-ubuntu-1404:     default: Adapter 1: nat
+I, [2016-06-22T16:04:18.533917 #18427]  INFO -- default-ubuntu-1404: ==> default: Forwarding ports...
+I, [2016-06-22T16:04:18.598249 #18427]  INFO -- default-ubuntu-1404:     default: 22 (guest) => 2200 (host) (adapter 1)
+I, [2016-06-22T16:04:18.734026 #18427]  INFO -- default-ubuntu-1404: ==> default: Booting VM...
+I, [2016-06-22T16:04:18.905317 #18427]  INFO -- default-ubuntu-1404: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2016-06-22T16:04:19.143077 #18427]  INFO -- default-ubuntu-1404:     default: SSH address: 127.0.0.1:2200
+I, [2016-06-22T16:04:19.143239 #18427]  INFO -- default-ubuntu-1404:     default: SSH username: vagrant
+I, [2016-06-22T16:04:19.143460 #18427]  INFO -- default-ubuntu-1404:     default: SSH auth method: private key
+I, [2016-06-22T16:04:19.288656 #18427]  INFO -- default-ubuntu-1404:     default: Warning: Remote connection disconnect. Retrying...
+I, [2016-06-22T16:04:28.692956 #18427]  INFO -- default-ubuntu-1404:     default: 
+I, [2016-06-22T16:04:28.693040 #18427]  INFO -- default-ubuntu-1404:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2016-06-22T16:04:28.693068 #18427]  INFO -- default-ubuntu-1404:     default: this with a newly generated keypair for better security.
+I, [2016-06-22T16:04:29.109823 #18427]  INFO -- default-ubuntu-1404:     default: 
+I, [2016-06-22T16:04:29.109949 #18427]  INFO -- default-ubuntu-1404:     default: Inserting generated public key within guest...
+I, [2016-06-22T16:04:29.164163 #18427]  INFO -- default-ubuntu-1404:     default: Removing insecure key from the guest if it's present...
+I, [2016-06-22T16:04:29.201072 #18427]  INFO -- default-ubuntu-1404:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2016-06-22T16:04:29.947510 #18427]  INFO -- default-ubuntu-1404: ==> default: Machine booted and ready!
+I, [2016-06-22T16:04:29.947840 #18427]  INFO -- default-ubuntu-1404: ==> default: Checking for guest additions in VM...
+I, [2016-06-22T16:04:29.990057 #18427]  INFO -- default-ubuntu-1404: ==> default: Setting hostname...
+I, [2016-06-22T16:04:32.658747 #18427]  INFO -- default-ubuntu-1404: ==> default: Mounting shared folders...
+I, [2016-06-22T16:04:32.659168 #18427]  INFO -- default-ubuntu-1404:     default: /tmp/repo-data => /Users/jjasghar/repo/appengine_hello_world
+I, [2016-06-22T16:04:32.896834 #18427]  INFO -- default-ubuntu-1404: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2016-06-22T16:04:34.624798 #18427]  INFO -- default-ubuntu-1404: [SSH] Established
+I, [2016-06-22T16:04:34.625103 #18427]  INFO -- default-ubuntu-1404: Vagrant instance <default-ubuntu-1404> created.
+I, [2016-06-22T16:04:34.626369 #18427]  INFO -- default-ubuntu-1404: Finished creating <default-ubuntu-1404> (0m26.05s).
+I, [2016-06-22T16:04:34.626477 #18427]  INFO -- default-ubuntu-1404: -----> Converging <default-ubuntu-1404>...
+I, [2016-06-22T16:04:34.627005 #18427]  INFO -- default-ubuntu-1404: Preparing files for transfer
+I, [2016-06-22T16:04:34.627103 #18427]  INFO -- default-ubuntu-1404: Preparing dna.json
+I, [2016-06-22T16:04:34.627471 #18427]  INFO -- default-ubuntu-1404: Resolving cookbook dependencies with Berkshelf 4.3.3...
+E, [2016-06-22T16:04:34.640889 #18427] ERROR -- default-ubuntu-1404: Converge failed on instance <default-ubuntu-1404>.
+E, [2016-06-22T16:04:34.640992 #18427] ERROR -- default-ubuntu-1404: ------Exception-------
+E, [2016-06-22T16:04:34.641007 #18427] ERROR -- default-ubuntu-1404: Class: Berkshelf::NotACookbook
+E, [2016-06-22T16:04:34.641017 #18427] ERROR -- default-ubuntu-1404: Message: The resource at '/Users/jasghar/repo/cookbooks/appengine_cookbook' does not appear to be a valid cookbook. Does it have a metadata.rb?
+E, [2016-06-22T16:04:34.641026 #18427] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2016-06-22T16:04:34.641034 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/locations/base.rb:59:in `validate_cached!'
+E, [2016-06-22T16:04:34.641042 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/locations/path.rb:16:in `install'
+E, [2016-06-22T16:04:34.641052 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:184:in `block in download_locations'
+E, [2016-06-22T16:04:34.641060 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:181:in `each'
+E, [2016-06-22T16:04:34.641089 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:181:in `download_locations'
+E, [2016-06-22T16:04:34.641097 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:154:in `install_from_universe'
+E, [2016-06-22T16:04:34.641105 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:39:in `run'
+E, [2016-06-22T16:04:34.641113 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/berksfile.rb:421:in `install'
+E, [2016-06-22T16:04:34.641121 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/berksfile.rb:630:in `block in vendor'
+E, [2016-06-22T16:04:34.641129 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/2.1.0/tmpdir.rb:88:in `mktmpdir'
+E, [2016-06-22T16:04:34.641137 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/berksfile.rb:628:in `vendor'
+E, [2016-06-22T16:04:34.641146 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/berkshelf.rb:68:in `block in resolve'
+E, [2016-06-22T16:04:34.641155 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2016-06-22T16:04:34.641162 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/berkshelf.rb:64:in `resolve'
+E, [2016-06-22T16:04:34.641170 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:329:in `block in resolve_with_berkshelf'
+E, [2016-06-22T16:04:34.641178 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:328:in `synchronize'
+E, [2016-06-22T16:04:34.641191 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:328:in `resolve_with_berkshelf'
+E, [2016-06-22T16:04:34.641201 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:264:in `prepare_cookbooks'
+E, [2016-06-22T16:04:34.641209 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:52:in `populate'
+E, [2016-06-22T16:04:34.641217 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef_base.rb:122:in `create_sandbox'
+E, [2016-06-22T16:04:34.641226 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef_zero.rb:53:in `create_sandbox'
+E, [2016-06-22T16:04:34.641235 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/base.rb:63:in `call'
+E, [2016-06-22T16:04:34.641242 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:373:in `block in converge_action'
+E, [2016-06-22T16:04:34.641250 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-22T16:04:34.641258 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-22T16:04:34.641266 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-22T16:04:34.641274 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-22T16:04:34.641282 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-22T16:04:34.641291 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:369:in `converge_action'
+E, [2016-06-22T16:04:34.641320 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-22T16:04:34.641328 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-22T16:04:34.641336 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-22T16:04:34.641344 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-22T16:04:34.641352 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/command.rb:176:in `public_send'
+E, [2016-06-22T16:04:34.641359 #18427] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2016-06-22T16:04:34.641367 #18427] ERROR -- default-ubuntu-1404: ----------------------

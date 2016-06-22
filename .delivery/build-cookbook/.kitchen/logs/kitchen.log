@@ -1,0 +1,46 @@
+I, [2016-06-22T16:04:07.957347 #18427]  INFO -- Kitchen: -----> Starting Kitchen (v1.8.0)
+I, [2016-06-22T16:04:08.574637 #18427]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
+I, [2016-06-22T16:04:34.626453 #18427]  INFO -- Kitchen: -----> Converging <default-ubuntu-1404>...
+E, [2016-06-22T16:04:34.642277 #18427] ERROR -- Kitchen: ------Exception-------
+E, [2016-06-22T16:04:34.642313 #18427] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-06-22T16:04:34.642328 #18427] ERROR -- Kitchen: Message: Failed to complete #converge action: [The resource at '/Users/jasghar/repo/cookbooks/appengine_cookbook' does not appear to be a valid cookbook. Does it have a metadata.rb?]
+E, [2016-06-22T16:04:34.642348 #18427] ERROR -- Kitchen: ---Nested Exception---
+E, [2016-06-22T16:04:34.642359 #18427] ERROR -- Kitchen: Class: Berkshelf::NotACookbook
+E, [2016-06-22T16:04:34.642375 #18427] ERROR -- Kitchen: Message: The resource at '/Users/jasghar/repo/cookbooks/appengine_cookbook' does not appear to be a valid cookbook. Does it have a metadata.rb?
+E, [2016-06-22T16:04:34.642389 #18427] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-06-22T16:04:34.642401 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/locations/base.rb:59:in `validate_cached!'
+E, [2016-06-22T16:04:34.642416 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/locations/path.rb:16:in `install'
+E, [2016-06-22T16:04:34.642428 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:184:in `block in download_locations'
+E, [2016-06-22T16:04:34.642442 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:181:in `each'
+E, [2016-06-22T16:04:34.642455 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:181:in `download_locations'
+E, [2016-06-22T16:04:34.642468 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:154:in `install_from_universe'
+E, [2016-06-22T16:04:34.642483 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/installer.rb:39:in `run'
+E, [2016-06-22T16:04:34.642496 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/berksfile.rb:421:in `install'
+E, [2016-06-22T16:04:34.642510 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/berksfile.rb:630:in `block in vendor'
+E, [2016-06-22T16:04:34.642524 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.1.0/tmpdir.rb:88:in `mktmpdir'
+E, [2016-06-22T16:04:34.642563 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-4.3.3/lib/berkshelf/berksfile.rb:628:in `vendor'
+E, [2016-06-22T16:04:34.642576 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/berkshelf.rb:68:in `block in resolve'
+E, [2016-06-22T16:04:34.642589 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2016-06-22T16:04:34.642602 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/berkshelf.rb:64:in `resolve'
+E, [2016-06-22T16:04:34.642613 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:329:in `block in resolve_with_berkshelf'
+E, [2016-06-22T16:04:34.642625 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:328:in `synchronize'
+E, [2016-06-22T16:04:34.642639 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:328:in `resolve_with_berkshelf'
+E, [2016-06-22T16:04:34.642652 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:264:in `prepare_cookbooks'
+E, [2016-06-22T16:04:34.642672 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef/common_sandbox.rb:52:in `populate'
+E, [2016-06-22T16:04:34.642688 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef_base.rb:122:in `create_sandbox'
+E, [2016-06-22T16:04:34.642701 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/chef_zero.rb:53:in `create_sandbox'
+E, [2016-06-22T16:04:34.642713 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/provisioner/base.rb:63:in `call'
+E, [2016-06-22T16:04:34.642725 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:373:in `block in converge_action'
+E, [2016-06-22T16:04:34.642745 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:513:in `call'
+E, [2016-06-22T16:04:34.642757 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-06-22T16:04:34.642768 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-06-22T16:04:34.642780 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-06-22T16:04:34.642792 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:477:in `action'
+E, [2016-06-22T16:04:34.642804 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:369:in `converge_action'
+E, [2016-06-22T16:04:34.642816 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-06-22T16:04:34.642828 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:347:in `each'
+E, [2016-06-22T16:04:34.642839 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-06-22T16:04:34.642878 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-06-22T16:04:34.642891 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/command.rb:176:in `public_send'
+E, [2016-06-22T16:04:34.642903 #18427] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.8.0/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2016-06-22T16:04:34.642916 #18427] ERROR -- Kitchen: ----------------------

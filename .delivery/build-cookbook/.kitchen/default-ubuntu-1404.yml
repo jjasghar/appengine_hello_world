@@ -1,0 +1,6 @@
+---
+hostname: 127.0.0.1
+port: '2200'
+username: vagrant
+ssh_key: "/Users/jjasghar/repo/appengine_hello_world/.delivery/build-cookbook/.kitchen/kitchen-vagrant/kitchen-build-cookbook-default-ubuntu-1404/.vagrant/machines/default/virtualbox/private_key"
+last_action: create
