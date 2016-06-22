@@ -4,5 +4,6 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
+include_recipe "apt::default"
 include_recipe "appengine::default"
 include_recipe "poise-python::default"
