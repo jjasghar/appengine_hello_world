@@ -1,6 +1,4 @@
 DEPENDENCIES
-  appengine
-    path: ../../../cookbooks/appengine
   build-cookbook
     path: .
     metadata: true
@@ -17,6 +15,7 @@ GRAPH
   appengine (0.0.1)
   build-cookbook (0.1.0)
     appengine (>= 0.0.0)
+    python (>= 0.0.0)
   build-essential (6.0.0)
     compat_resource (>= 12.10)
     mingw (>= 1.1)
@@ -48,6 +47,9 @@ GRAPH
     compat_resource (>= 0.0.0)
     runit (>= 1.2.0)
     windows (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   runit (1.7.8)
     packagecloud (>= 0.0.0)
   seven_zip (2.0.1)
