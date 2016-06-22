@@ -8,4 +8,4 @@ group :delivery do
   cookbook 'test', path: './test/fixtures/cookbooks/test'
 end
 
-cookbook 'appengine', path: '/Users/jjasghar/repo/cookbooks/appengine_cookbook'
+cookbook 'appengine', path: '/Users/jjasghar/repo/cookbooks/appengine'
