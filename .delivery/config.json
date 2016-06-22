@@ -6,7 +6,7 @@
   },
   "skip_phases": [
     "quality",
-    "security",
+    "security"
   ],
   "build_nodes": {},
   "dependencies": []

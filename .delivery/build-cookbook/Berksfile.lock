@@ -1,0 +1,60 @@
+DEPENDENCIES
+  appengine
+    path: ../../../cookbooks/appengine
+  build-cookbook
+    path: .
+    metadata: true
+  delivery-base
+    git: https://github.com/chef-cookbooks/delivery-base
+    revision: 246ff5c8ef07a6d5f99d19082d4e1bd2cc53f129
+  delivery_build
+    git: https://github.com/chef-cookbooks/delivery_build
+    revision: 24bcbbc5cc6e3154120b54d435280fccc93bca44
+  test
+    path: test/fixtures/cookbooks/test
+
+GRAPH
+  appengine (0.0.1)
+  build-cookbook (0.1.0)
+    appengine (>= 0.0.0)
+  build-essential (6.0.0)
+    compat_resource (>= 12.10)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  chef-ingredient (0.18.5)
+  chef-sugar (3.3.0)
+  chef_handler (1.4.0)
+  compat_resource (12.10.6)
+  delivery-base (0.2.2)
+    push-jobs (>= 0.0.0)
+  delivery_build (0.4.27)
+    build-essential (>= 0.0.0)
+    chef-ingredient (>= 0.18.0)
+    chef-sugar (>= 0.0.0)
+    delivery-base (>= 0.0.0)
+    git (>= 0.0.0)
+  dmg (2.4.0)
+  git (4.5.0)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  mingw (1.2.0)
+    compat_resource (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+  packagecloud (0.2.3)
+  push-jobs (3.2.0)
+    chef-ingredient (>= 0.18.0)
+    compat_resource (>= 0.0.0)
+    runit (>= 1.2.0)
+    windows (>= 0.0.0)
+  runit (1.7.8)
+    packagecloud (>= 0.0.0)
+  seven_zip (2.0.1)
+    windows (>= 1.2.2)
+  test (0.1.0)
+  windows (1.44.0)
+    chef_handler (>= 0.0.0)
+  yum (3.11.0)
+  yum-epel (0.7.0)
+    yum (>= 3.6.3)
