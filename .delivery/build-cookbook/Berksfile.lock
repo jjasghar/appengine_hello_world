@@ -6,15 +6,17 @@ DEPENDENCIES
     git: https://github.com/chef-cookbooks/delivery-base
     revision: 246ff5c8ef07a6d5f99d19082d4e1bd2cc53f129
   delivery_build
-    git: https://github.com/chef-cookbooks/delivery_build
-    revision: 24bcbbc5cc6e3154120b54d435280fccc93bca44
+    path: ../../../cookbooks/delivery_build
   test
     path: test/fixtures/cookbooks/test
 
 GRAPH
-  appengine (0.0.1)
-  build-cookbook (0.1.0)
+  appengine (0.0.2)
+  apt (4.0.1)
+    compat_resource (>= 12.10)
+  build-cookbook (0.1.1)
     appengine (>= 0.0.0)
+    apt (>= 0.0.0)
     poise-python (>= 0.0.0)
   build-essential (6.0.0)
     compat_resource (>= 12.10)
@@ -38,7 +40,7 @@ GRAPH
     dmg (>= 0.0.0)
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
-  mingw (1.2.0)
+  mingw (1.2.2)
     compat_resource (>= 0.0.0)
     seven_zip (>= 0.0.0)
   packagecloud (0.2.3)

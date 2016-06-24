@@ -4,8 +4,6 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-include_recipe "build-cookbook::default"
-
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}/")
 
 bash "check the python script" do
