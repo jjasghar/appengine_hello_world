@@ -22,7 +22,7 @@ GRAPH
     compat_resource (>= 12.10)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
-  chef-ingredient (0.18.5)
+  chef-ingredient (0.19.0)
   chef-sugar (3.3.0)
   chef_handler (1.4.0)
   compat_resource (12.10.6)
