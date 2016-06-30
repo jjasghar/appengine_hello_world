@@ -7,7 +7,6 @@
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}/")
 
 bash "check the python script" do
-  user "root"
   cwd src_dir
   code <<-EOH
     STATUS=0
