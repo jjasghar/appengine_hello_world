@@ -22,6 +22,7 @@ end
 
 bash "install pip" do
   cwd src_dir
+  creates "/etc/yum.repos.d/epel.repo"
   code <<-EOH
     STATUS=0
     rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm || STATUS=1
