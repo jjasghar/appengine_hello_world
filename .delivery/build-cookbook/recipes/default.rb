@@ -10,6 +10,10 @@ include_recipe "appengine::default"
 include_recipe "build-essential::default"
 include_recipe "poise-python::default"
 
+package 'libffi-dev' do
+  action :install
+end
+
 bash "install pep8" do
   user 'root'
   cwd src_dir
