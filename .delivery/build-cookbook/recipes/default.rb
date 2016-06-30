@@ -10,7 +10,13 @@ include_recipe "appengine::default"
 include_recipe "build-essential::default"
 include_recipe "poise-python::default"
 
-package 'libffi-dev' do
+package 'libffi' do
+  case node[:platform]
+  when 'redhat', 'centos'
+    package_name 'libffi'
+  when 'ubuntu', 'debian'
+    package_name 'libffi-dev'
+  end
   action :install
 end
 
