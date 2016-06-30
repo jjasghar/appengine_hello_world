@@ -7,6 +7,7 @@
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}/")
 
 include_recipe "appengine::default"
+include_recipe "build-essential::default"
 include_recipe "poise-python::default"
 
 bash "install pep8" do
