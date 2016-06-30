@@ -50,7 +50,6 @@ bash "install pep8" do
   cwd src_dir
   code <<-EOH
     STATUS=0
-    pip install --upgrade ndg-httpsclient || STATUS=1
     pip install pep8  || STATUS=1
     exit $STATUS
   EOH
