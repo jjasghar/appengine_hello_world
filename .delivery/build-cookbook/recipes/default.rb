@@ -15,7 +15,6 @@ package 'libffi-dev' do
 end
 
 bash "install pep8" do
-  user 'root'
   cwd src_dir
   code <<-EOH
     STATUS=0
