@@ -12,7 +12,7 @@ DEPENDENCIES
     path: test/fixtures/cookbooks/test
 
 GRAPH
-  appengine (0.0.3)
+  appengine (0.0.5)
   apt (4.0.1)
     compat_resource (>= 12.10)
   build-cookbook (0.1.5)
@@ -64,7 +64,7 @@ GRAPH
   seven_zip (2.0.1)
     windows (>= 1.2.2)
   test (0.1.0)
-  windows (1.44.0)
+  windows (1.44.1)
     chef_handler (>= 0.0.0)
   yum (3.11.0)
   yum-epel (0.7.0)
