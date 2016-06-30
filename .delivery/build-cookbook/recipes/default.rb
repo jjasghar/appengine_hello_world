@@ -22,7 +22,7 @@ end
 
 package 'python-pip' do
   action :install
-  only_if { node['platform'] = 'redhat' || node['platform'] = 'centos' }
+  only_if { node.default['platform'] = 'redhat' || node.default['platform'] = 'centos' }
 end
 
 bash "install pep8" do
