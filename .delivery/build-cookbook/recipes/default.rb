@@ -24,6 +24,7 @@ bash "install pip" do
   cwd src_dir
   code <<-EOH
     STATUS=0
+    yum install python-cffi
     rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm || STATUS=1
     exit $STATUS
   EOH
