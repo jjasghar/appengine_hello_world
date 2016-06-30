@@ -31,6 +31,11 @@ bash "install pip" do
   only_if { node.default['platform'] = 'redhat' || node.default['platform'] = 'centos' }
 end
 
+package 'python-devel' do
+  action :install
+  only_if { node.default['platform'] = 'redhat' || node.default['platform'] = 'centos' }
+end
+
 package 'python-cffi' do
   action :install
   only_if { node.default['platform'] = 'redhat' || node.default['platform'] = 'centos' }
