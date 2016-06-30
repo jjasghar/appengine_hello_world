@@ -20,6 +20,11 @@ package 'libffi' do
   action :install
 end
 
+package 'python-pip' do
+  action :install
+  only_if { node['platform'] = 'redhat' || node['platform'] = 'centos' }
+end
+
 bash "install pep8" do
   cwd src_dir
   code <<-EOH
