@@ -20,6 +20,16 @@ package 'libffi' do
   action :install
 end
 
+bash "install pip" do
+  cwd src_dir
+  code <<-EOH
+    STATUS=0
+    rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm || STATUS=1
+    exit $STATUS
+  EOH
+  only_if { node.default['platform'] = 'redhat' || node.default['platform'] = 'centos' }
+end
+
 package 'python-pip' do
   action :install
   only_if { node.default['platform'] = 'redhat' || node.default['platform'] = 'centos' }
