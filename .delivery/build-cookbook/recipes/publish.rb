@@ -9,7 +9,7 @@ src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}/")
 git "#{src_dir}/#{node.default['appengine']['source_location']}" do
   repository node.default['appengine']['repository']
   reference  node.default['appengine']['branch']
-  user 'root'
-  group 'root'
+  user 'dbuild'
+  group 'dbuild'
   action :sync
 end
