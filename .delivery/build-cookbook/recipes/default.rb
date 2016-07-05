@@ -20,6 +20,14 @@ package 'libffi' do
   action :install
 end
 
+directory "#{src_dir}/tmp/" do
+  owner "dbuild"
+  group "dbuild"
+  mode "0755"
+
+  action :create
+end
+
 bash "install pip" do
   cwd src_dir
   creates "/etc/yum.repos.d/epel.repo"
