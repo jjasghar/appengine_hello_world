@@ -8,6 +8,14 @@ account_json = ::File.expand_path('/tmp/gcloud/service_account.json')
 
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}")
 
+git "#{src_dir}/#{node.default['appengine']['source_location']}" do
+  repository node.default['appengine']['repository']
+  reference  node.default['appengine']['branch']
+  user 'dbuild'
+  group 'dbuild'
+  action :sync
+end
+
 appengine 'formal-platform-134918' do
   app_yaml "#{src_dir}/#{node.default['appengine']['source_location']}/app.yaml"
   service_id 'default'
