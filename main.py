@@ -19,7 +19,7 @@ import webapp2
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hello, ChefConf! Now it is %s!' % date.today())
+        self.response.write('Hello, single! Now it is %s!' % date.today())
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
