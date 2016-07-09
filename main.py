@@ -18,15 +18,8 @@ import webapp2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.headers['Content-Type'] = 'text/html'
-        self.response.write("""
-          <p>
-            <img
-              src='https://chefconf.chef.io/images/chefconf-logo-88838cbe.svg'
-              width='270'>
-          </p>
-          <p>Hello, Weekend! Today it is %s!</p>
-        """ % date.today())
+        self.response.headers['Content-Type'] = 'text/plain'
+        self.response.write('Hello, ChefConf! Now it is %s!' % date.today())
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),

@@ -24,7 +24,8 @@ when 'acceptance'
     bucket_name 'chef-conf16-appengine'
     service_account_json account_json
     source "#{src_dir}/#{node.default['appengine']['source_location']}"
-    version_id "#{ENV['CHEF_PUSH_JOB_ID']}"
+    # TODO(jj): Enable this once cookbook is updated to 0.0.9+
+    # version_id "#{ENV['CHEF_PUSH_JOB_ID']}"
     action :stage
   end
 
@@ -43,6 +44,7 @@ when 'delivered'
     bucket_name 'chef-conf16-appengine'
     service_account_json account_json
     source "#{src_dir}/#{node.default['appengine']['source_location']}"
-    version_id "#{ENV['CHEF_PUSH_JOB_ID']}"
+    # TODO(jj): Enable this once cookbook is updated to 0.0.9+
+    # version_id "#{ENV['CHEF_PUSH_JOB_ID']}"
   end
 end
