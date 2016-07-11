@@ -18,8 +18,7 @@ bash "check site images integrity" do
     IMAGE_TESTER_AVAILABILITY_TESTS=1 \
       /opt/chefdk/embedded/bin/ruby \
         .delivery/build-cookbook/scripts/site_image_tester.rb \
-          #{staging_site_url} | tee #{image_checker_logfile}
-    cat #{image_checker_logfile}
+          #{staging_site_url} > #{image_checker_logfile}
     STATUS=$?
     exit $STATUS
   EOH
@@ -27,5 +26,3 @@ end
 
 output=`cat #{image_checker_logfile}`
 Chef::Log.info output
-
-File.delete(image_checker_logfile)
