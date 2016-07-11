@@ -24,5 +24,12 @@ bash "check site images integrity" do
   EOH
 end
 
-output=`cat #{image_checker_logfile}`
-Chef::Log.info output
+ruby_block 'print integrity checks output' do
+  block do
+    output=`cat #{image_checker_logfile}`
+    Chef::Log.info output
+
+    File.delete(image_checker_logfile)
+  end
+  action :run
+end
