@@ -39,8 +39,9 @@ require 'nokogiri'
 require 'open-uri'
 require 'uri'
 
-healthy = true
 tests_run = false
+security_tests_passed = true
+availability_tests_passed = true
 
 site = ARGV[0]
 fail_if_no_images = ENV['IMAGE_TESTER_FAIL_IF_NO_IMAGES']
@@ -62,25 +63,27 @@ end
 
 if security_tests then
   tests_run = true
+  puts "Running security tests:"
   doc.xpath("//img/@src").each do |src|
     uri = URI.join(site, src)
     next if uri.scheme != 'http' and uri.scheme != 'https'
-    print "Checking security for image #{uri}... "
+    print "  - checking image #{uri}... "
     if uri.scheme == 'https' then
       puts "OK"
     else
       puts "FAILED (insecure image)"
-      healthy = false
+      security_tests_passed = false
     end
   end
 end
 
 if availability_tests then
   tests_run = true
+  puts "Running availability tests:"
   doc.xpath("//img/@src").each do |src|
     uri = URI.join(site, src)
     next if uri.scheme != 'http' and uri.scheme != 'https'
-    print "Checking availability of image #{uri}... "
+    print "  - checking image #{uri}... "
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = uri.instance_of? URI::HTTPS
     head = Net::HTTP::Head.new(uri.request_uri)
@@ -89,7 +92,7 @@ if availability_tests then
       puts "OK"
     else
       puts "FAILED #{response.class.name.gsub('Net::HTTP', '')}"
-      healthy = false
+      availability_tests_passed = false
     end
   end
 end
@@ -99,4 +102,16 @@ if not tests_run then
   exit 1
 end
 
-exit healthy ? 0 : 1
+if not security_tests_passed then
+  puts "ERROR: Security tests failed."
+else
+  puts "SUCCESS: Security tests passed."
+end
+
+if not availability_tests_passed then
+  puts "ERROR: Availability tests failed."
+else
+  puts "SUCCESS: Availability tests passed."
+end
+
+exit security_tests_passed && availability_tests_passed ? 0 : 1
