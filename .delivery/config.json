@@ -6,8 +6,7 @@
   },
   "skip_phases": [
     "provision",
-    "smoke",
-    "unit"
+    "smoke"
   ],
   "build_nodes": {},
   "dependencies": []
