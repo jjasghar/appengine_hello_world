@@ -10,7 +10,7 @@ bash "install pep8" do
   cwd src_dir
   code <<-EOH
     STATUS=0
-    gem environment
+    /opt/chefdk/embedded/bin/gem environment
     pip install pep8  || STATUS=1
     exit $STATUS
   EOH
