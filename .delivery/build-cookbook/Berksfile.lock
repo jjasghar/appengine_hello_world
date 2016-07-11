@@ -12,10 +12,10 @@ DEPENDENCIES
     path: test/fixtures/cookbooks/test
 
 GRAPH
-  appengine (0.0.10)
+  appengine (0.0.11)
   apt (4.0.1)
     compat_resource (>= 12.10)
-  build-cookbook (0.1.43)
+  build-cookbook (0.1.44)
     appengine (>= 0.0.0)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
