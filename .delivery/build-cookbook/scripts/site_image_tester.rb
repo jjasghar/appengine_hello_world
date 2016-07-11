@@ -37,8 +37,21 @@ require 'net/http'
 require 'net/https'
 require 'nokogiri'
 require 'open-uri'
-require 'term/ansicolor'
 require 'uri'
+
+# Note: You can use term/ansicolor instead of this ANSIColor class, which was implemented here only
+# for the sake of the demo.
+# | require 'term/ansicolor'
+module Term
+  class ANSIColor
+    def self.red(msg)
+      "\e[31m#{msg}\e[0m"
+    end
+    def self.green(msg)
+      "\e[32m#{msg}\e[0m"
+    end
+  end
+end
 
 tests_run = false
 security_tests_passed = true
