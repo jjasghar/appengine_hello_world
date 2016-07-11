@@ -5,6 +5,9 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 # TODO(jj): Extract the dynamic URL from the appengine resource
+
+src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}")
+
 staging_site_url = 'https://www.google.com'
 
 bash "check site images integrity" do
