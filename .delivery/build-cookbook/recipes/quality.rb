@@ -14,12 +14,8 @@ bash "check site images integrity" do
   cwd src_dir
   code <<-EOH
     STATUS=0
-    ls -l ../../../
-    ls -l ../../../../
-    ls -l ../../../../../
-    ls -l ../../../../chef
     IMAGE_TESTER_AVAILABILITY_TESTS=1 \
-      ruby ../../../../chef/build-cookbook/scripts/site_image_tester.rb #{staging_site_url} || STATUS=1
+      ruby ../../chef/build-cookbook/scripts/site_image_tester.rb #{staging_site_url} || STATUS=1
     exit $STATUS
   EOH
 end
