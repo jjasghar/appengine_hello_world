@@ -29,7 +29,7 @@ when 'acceptance'
   ruby_block 'print integrity checks output' do
     block do
       output=`cat #{image_checker_logfile}`
-      Chef::Log.info output
+      Chef::Log.debug output
 
       File.delete(image_checker_logfile)
     end

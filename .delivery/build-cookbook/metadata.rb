@@ -2,7 +2,7 @@ name 'build-cookbook'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'all_rights'
-version '0.1.44'
+version '0.1.45'
 
 depends 'apt'
 depends 'appengine'
