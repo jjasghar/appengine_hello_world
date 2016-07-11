@@ -14,7 +14,7 @@ bash "check site images integrity" do
   code <<-EOH
     STATUS=0
     IMAGE_TESTER_SECURITY_TESTS=1 \
-      ruby .delivery/build-cookbook/scripts/site_image_tester.rb #{staging_site_url} || STATUS=1
+       /opt/chefdk/embedded/bin/ruby .delivery/build-cookbook/scripts/site_image_tester.rb #{staging_site_url} || STATUS=1
     exit $STATUS
   EOH
 end
