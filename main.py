@@ -18,7 +18,7 @@ import webapp2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        logo = 'http://style.chef.io/assets/images/example/logo-tm.svg'
+        logo = 'https://avatars1.githubusercontent.com/u/29740'
         self.response.headers['Content-Type'] = 'text/html'
         self.response.write('<html><body>')
         self.response.write('Hello, World! Now it is %s!' % date.today())
