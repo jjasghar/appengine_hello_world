@@ -6,6 +6,9 @@
 
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}/")
 
+require 'pp'
+pp node
+
 bash "install pep8" do
   cwd src_dir
   code <<-EOH
