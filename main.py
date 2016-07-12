@@ -13,18 +13,71 @@
 # limitations under the License.
 
 from datetime import date
+import os
 import webapp2
 
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        logo = 'https://chef.io/bad'
+        site = 'http://chefconf.chef.io'
+        logo = '%s/images/chefconf-logo-88838cbe.png' % site
+        background = '%s/images/hero/home-large-85980001.png' % site
         self.response.headers['Content-Type'] = 'text/html'
-        self.response.write('<html><body>')
-        self.response.write('Hello, World! Now it is %s!' % date.today())
-        self.response.write('<img src="%s">' % logo)
-        self.response.write('</body></html>')
+        self.response.write("""
+          <html>
+            <style>
+              BODY {
+                background-color: gray;
+                background-image: url('%s');
+                background-size: 100%% 100%%;
+                font-family: Verdana;
+                font-size: 14pt;
+              }
+              P hello {
+                background: #dbe200;
+                color: #435363;
+                padding: 8pt;
+                font-weight: bold;
+              }
+              P date {
+                background: #fdffaf;
+                padding: 8pt;
+                font-weight: bold;
+              }
+              .center {
+                width: 400px;
+                height: 110px;
+                position: fixed;
+                top: 50%%;
+                left: 50%%;
+                margin-left: -200px;
+                margin-top: -55px;
+                text-align: center;
+              }
+            </style>
+            <body>
+              <div class='center'>
+                <table><tr height='110'><td width='600' align='center'>
+                  <img src='%s' width='270' hspace='10' vspace='10'>
+                  <p>
+                    <hello>Hello, ChefConf!</hello>
+                    <date>Today is %s!</date>
+                  </p>
+                </td></tr></table>
+              </div>
+            </body>
+          </html>
+        """ % (background, logo, date.today()))
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
 ], debug=True)
+
+
+def main():
+    os.environ['REQUEST_METHOD'] = 'GET'
+    os.environ['PATH_INFO'] = '/'
+    app.run()
+
+if __name__ == '__main__':
+    main()
