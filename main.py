@@ -19,8 +19,11 @@ import webapp2
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
-        self.response.write('<html><head><style>H1 { font-family: Verdana }</style></head><body>')
-        self.response.write('<h1>Hello, World! Now it is %s!</h1>' % date.today())
+        self.response.write('<html><head>')
+        self.response.write('<style>H1 { font-family: Verdana }</style>')
+        self.response.write('</head><body>')
+        self.response.write('<h1>Hello, World! Now it is %s!</h1>'
+                            % date.today())
         self.response.write('</body></html>')
 
 app = webapp2.WSGIApplication([
