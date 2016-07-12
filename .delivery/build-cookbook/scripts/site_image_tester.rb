@@ -45,7 +45,7 @@ require 'uri'
 module Term
   class ANSIColor
     def self.red(msg)
-      "\e[31m#{msg}\e[0m"
+      "\e[31m\e[1m#{msg}\e[0m"
     end
     def self.green(msg)
       "\e[32m#{msg}\e[0m"
