@@ -27,8 +27,7 @@ when 'acceptance'
       IMAGE_TESTER_AVAILABILITY_TESTS=1 \
         /opt/chefdk/embedded/bin/ruby \
           .delivery/build-cookbook/scripts/site_image_tester.rb \
-            #{deployer.staging_url} > #{image_checker_logfile}
-      STATUS=$?
+            #{deployer.staging_url} > #{image_checker_logfile} || STATUS=1
       exit $STATUS
     EOH
   end

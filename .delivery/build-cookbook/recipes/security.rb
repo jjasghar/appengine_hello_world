@@ -4,17 +4,27 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-# TODO(jj): Extract the dynamic URL from the appengine resource
-staging_site_url = 'https://www.google.com'
-
+account_json = ::File.expand_path('/tmp/gcloud/service_account.json')
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}")
 
+deployer = Google::ChefConf16::AppengineDeploy.new(
+  :app_id => 'formal-platform-134918',
+  :app_yaml => "#{src_dir}/app.yaml",
+  :service_id => 'default',
+  :bucket_name => 'chef-conf16-appengine',
+  :service_account_json => account_json
+)
+puts "Application version #{deployer.staging_url}"
+
+# TODO(nelsona): Sync this code with functional.rb once output is fixed.
 bash "check site images integrity" do
   cwd src_dir
   code <<-EOH
     STATUS=0
     IMAGE_TESTER_SECURITY_TESTS=1 \
-       /opt/chefdk/embedded/bin/ruby .delivery/build-cookbook/scripts/site_image_tester.rb #{staging_site_url} || STATUS=1
+       /opt/chefdk/embedded/bin/ruby \
+         .delivery/build-cookbook/scripts/site_image_tester.rb \
+           #{deployer.staging_url} || STATUS=1
     exit $STATUS
   EOH
 end
