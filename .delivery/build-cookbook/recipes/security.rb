@@ -17,15 +17,18 @@ deployer = Google::ChefConf16::AppengineDeploy.new(
 )
 puts "Application version #{deployer.staging_url}"
 
-# TODO(nelsona): Sync this code with functional.rb once output is fixed.
-bash "check site images integrity" do
-  cwd src_dir
-  code <<-EOH
-    STATUS=0
-    IMAGE_TESTER_SECURITY_TESTS=1 \
-       /opt/chefdk/embedded/bin/ruby \
-         .delivery/build-cookbook/scripts/site_image_tester.rb \
-           #{deployer.staging_url} || STATUS=1
-    exit $STATUS
-  EOH
+case node['delivery']['change']['stage']
+when 'acceptance'
+  # TODO(nelsona): Sync this code with functional.rb once output is fixed.
+  bash "check site images integrity" do
+    cwd src_dir
+    code <<-EOH
+      STATUS=0
+      IMAGE_TESTER_SECURITY_TESTS=1 \
+         /opt/chefdk/embedded/bin/ruby \
+           .delivery/build-cookbook/scripts/site_image_tester.rb \
+             #{deployer.staging_url} || STATUS=1
+      exit $STATUS
+    EOH
+  end
 end
