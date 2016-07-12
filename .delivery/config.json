@@ -6,6 +6,7 @@
   },
   "skip_phases": [
     "provision",
+    "quality",
     "smoke",
     "unit"
   ],
