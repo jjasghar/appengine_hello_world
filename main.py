@@ -21,7 +21,7 @@ class MainPage(webapp2.RequestHandler):
         logo = 'https://chef.io/bad'
         self.response.headers['Content-Type'] = 'text/html'
         self.response.write('<html><body>')
-        self.response.write('Hello, World! Now it is %s!' % date.today())
+        self.response.write('Hello, World? Now it is %s!' % date.today())
         self.response.write('<img src="%s">' % logo)
         self.response.write('</body></html>')
 
