@@ -8,9 +8,6 @@ version_id = node['delivery']['change']['change_id']
 account_json = ::File.expand_path('/tmp/gcloud/service_account.json')
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}")
 
-require 'pp'
-pp node
-
 deployer = Google::ChefConf16::AppengineDeploy.new(
   :app_id => 'formal-platform-134918',
   :app_yaml => "#{src_dir}/app.yaml",
