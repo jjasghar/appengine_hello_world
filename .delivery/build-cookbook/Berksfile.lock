@@ -15,7 +15,7 @@ GRAPH
   appengine (0.0.11)
   apt (4.0.1)
     compat_resource (>= 12.10)
-  build-cookbook (0.1.47)
+  build-cookbook (0.1.48)
     appengine (>= 0.0.0)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
