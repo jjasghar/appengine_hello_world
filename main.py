@@ -18,9 +18,12 @@ import webapp2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        logo = 'http://style.chef.io/assets/images/example/logo-tm.svg'
         self.response.headers['Content-Type'] = 'text/html'
+        self.response.write('<html><body>')
         self.response.write('Hello, World! Now it is %s!' % date.today())
-        self.response.write('<img src="http://chef.io/broken.jpg">')
+        self.response.write('<img src="%s">' % logo)
+        self.response.write('</body></html>')
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
