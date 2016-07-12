@@ -18,11 +18,12 @@ import webapp2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        logo = 'https://chef.io/bad'
         self.response.headers['Content-Type'] = 'text/html'
-        self.response.write('<html><body>')
-        self.response.write('Hello, World? Now it is %s!' % date.today())
-        self.response.write('<img src="%s">' % logo)
+        self.response.write('<html><head>')
+        self.response.write('<style>H1 { font-family: Verdana }</style>')
+        self.response.write('</head><body>')
+        self.response.write('<h1>Hello, World! Now it is %s!</h1>'
+                            % date.today())
         self.response.write('</body></html>')
 
 app = webapp2.WSGIApplication([
