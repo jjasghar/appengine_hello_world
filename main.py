@@ -20,6 +20,7 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
         self.response.write('Hello, World! Now it is %s!' % date.today())
+        self.response.write('<img src="http://chef.io/broken.jpg">')
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
