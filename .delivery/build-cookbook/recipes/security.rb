@@ -11,6 +11,7 @@ deployer = Google::ChefConf16::AppengineDeploy.new(
   :app_id => 'formal-platform-134918',
   :app_yaml => "#{src_dir}/app.yaml",
   :service_id => 'default',
+  :version_id => ENV['CHEF_PUSH_JOB_ID'],
   :bucket_name => 'chef-conf16-appengine',
   :service_account_json => account_json
 )
