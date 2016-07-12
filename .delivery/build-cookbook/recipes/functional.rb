@@ -4,10 +4,17 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
+account_json = ::File.expand_path('/tmp/gcloud/service_account.json')
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}")
 
-# TODO(jj): Extract the dynamic URL from the appengine resource
-staging_site_url = 'https://www.google.com'
+deployer = Google::ChefConf16::AppengineDeploy.new(
+  :app_id => 'formal-platform-134918',
+  :app_yaml => "#{src_dir}/#{node.default['appengine']['source_location']}/app.yaml"
+  :service_id => 'default',
+  :bucket_name => 'chef-conf16-appengine',
+  :service_account_json => account_json
+)
+puts "Application version #{deployer.staging_url}"
 
 image_checker_logfile="/tmp/build-functional-#{ENV['CHEF_PUSH_JOB_ID']}.log"
 
@@ -20,7 +27,7 @@ when 'acceptance'
       IMAGE_TESTER_AVAILABILITY_TESTS=1 \
         /opt/chefdk/embedded/bin/ruby \
           .delivery/build-cookbook/scripts/site_image_tester.rb \
-            #{staging_site_url} > #{image_checker_logfile}
+            #{deployer.staging_url} > #{image_checker_logfile}
       STATUS=$?
       exit $STATUS
     EOH
@@ -29,7 +36,7 @@ when 'acceptance'
   ruby_block 'print integrity checks output' do
     block do
       output=`cat #{image_checker_logfile}`
-      Chef::Log.debug output
+      puts output
 
       File.delete(image_checker_logfile)
     end
