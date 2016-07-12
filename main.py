@@ -19,9 +19,9 @@ import webapp2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        site = 'http://storage.googleapis.com/caps-playground'
-        logo = '%s/chefconf/logo.png' % site
-        background = '%s/chefconf/back.png' % site
+        site = 'https://storage.googleapis.com/caps-playground'
+        logo = '%s/chefconf/logo.svg' % site
+        background = '%s/chefconf/back.jpg' % site
         self.response.headers['Content-Type'] = 'text/html'
         self.response.write("""
           <html>
