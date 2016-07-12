@@ -19,7 +19,7 @@ import webapp2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        site = 'https`://chefconf.chef.io'
+        site = 'https://chefconf.chef.io'
         logo = '%s/images/chefconf-logo-88838cbe.svg' % site
         background = '%s/images/hero/home-large-85980001.jpg' % site
         self.response.headers['Content-Type'] = 'text/html'
