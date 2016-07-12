@@ -4,8 +4,8 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
+version_id = node['delivery']['change']['change_id']
 account_json = ::File.expand_path('/tmp/gcloud/service_account.json')
-
 src_dir = File.expand_path("#{node['delivery']['workspace']['repo']}")
 
 case node['delivery']['change']['stage']
@@ -24,7 +24,7 @@ when 'acceptance'
     bucket_name 'chef-conf16-appengine'
     service_account_json account_json
     source "#{src_dir}/#{node.default['appengine']['source_location']}"
-    version_id "#{ENV['CHEF_PUSH_JOB_ID']}"
+    version_id version_id
     action :stage
   end
 
@@ -43,6 +43,6 @@ when 'delivered'
     bucket_name 'chef-conf16-appengine'
     service_account_json account_json
     source "#{src_dir}/#{node.default['appengine']['source_location']}"
-    version_id "#{ENV['CHEF_PUSH_JOB_ID']}"
+    version_id version_id
   end
 end
