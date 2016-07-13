@@ -19,7 +19,7 @@ import webapp2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        root = 'https://storage.googleapis.com/caps-staging'
+        root = 'https://storage.googleapis.com/caps-release/public/chefconf16'
         google_logo = '%s/cloud_platform_icon_horizontal_new.png' % root
         chef_logo = '%s/chef_logo.svg' % root
         style = '%s/site.css?v=2' % root
